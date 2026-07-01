@@ -166,7 +166,6 @@ In Java, constructors differ from other methods in that:
 
 Both are doing same job why parameter constructor is Better
 1. Ensures required data is provided
-
 If every student must have a name and email:
 ```java
 Student s = new Student(); // Not allowed if only parameterized constructor exists
@@ -174,7 +173,6 @@ Student s = new Student(); // Not allowed if only parameterized constructor exis
 The compiler forces you to provide the required information.
 
 2. Prevents partially initialized objects
-
 With a default constructor:
 ```java
 Student s = new Student();
@@ -182,15 +180,13 @@ s.name = "Prateek";
 // Forgot email
 ```
 Now email is still null.
-
 With a parameterized constructor:
-
+```java
 Student s = new Student("Prateek", "prateek@gmail.in");
-
+```
 Both values are initialized together.
 
 3. Validation in one place
-
 You can validate the input inside the constructor.
 ```java
 Student(String name, String email) {
@@ -205,7 +201,6 @@ Student(String name, String email) {
 Every Student object created will automatically follow these rules.
 
 4. Less code and easier to read
-
 Instead of:
 ```java
 Student s = new Student();
@@ -213,10 +208,11 @@ s.name = "Prateek";
 s.email = "prateek@gmail.in";
 ```
 You write:
-
+```java
 Student s = new Student("Prateek", "prateek@gmail.in");
-
+```
 It's shorter and immediately shows what data is used to create the object.
+
 ### Copy constructor
 A copy constructor is a member function that initializes an object using another object of the same class. A copy constructor has the following general function prototype:
 
